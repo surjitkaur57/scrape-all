@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Indeed Jobs</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="14%">Indeed Id</th>
+                        <th width="14%">Company Title</th>
+                        <th width="18%">Location</th>
+                        <th width="12%">Salary</th>
+                        <th colspan="42">Summary<a></th>
+
+                    </tr>
+                </thead>
+                    {% for indeed in indeed %}
+                <tbody>
+                    <tr>
+                        <td width="14%">{{ indeed._id }}</td>
+                        <td width="14%">{{ indeed.title }}</td>
+                        <td width="18%">{{ indeed.location }}</td>
+                        <td width="12%">{{ indeed.sal }}</td>
+                        <td width="42%">{{ indeed.summary }}</td>
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

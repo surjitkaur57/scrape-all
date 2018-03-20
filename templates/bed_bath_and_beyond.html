@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Bed Bath And Beyond </h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="18.8%">BedBathAndBeyond Id</th>
+                        <th width="18.8%">BedBathAndBeyond Title</th>
+                        <th width="18.8%">BedBathAndBeyond Price</th>
+
+                    </tr>
+                </thead>
+                    {% for bedbathandbeyond in bedbathandbeyond %}
+                <tbody>
+                    <tr>
+                        <td width="17%">{{ bedbathandbeyond._id }}</td>
+                        <td width="17%">{{ bedbathandbeyond.title }}</td>
+                        <td width="17%">{{ bedbathandbeyond.price }}</td>
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

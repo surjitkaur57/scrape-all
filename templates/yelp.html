@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Yelp</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="17%">Yelp Id</th>
+                        <th width="17%">Yelp Title</th>
+                        <th width="17%">Yelp Reviews</th>
+                        <th width="17%">Yelp Services</th>
+                        <th colspan="17%">Yelp Address</th>
+                        <!--<th colspan="17%">Yelp Phone</th>-->
+                        <!--<th colspan="17%">Yelp Snippet</th>-->
+
+                    </tr>
+                </thead>
+                    {% for yelp in yelp %}
+                <tbody>
+                    <tr>
+                        <td width="17%">{{ yelp._id }}</td>
+                        <td width="17%">{{ yelp.title }}</td>
+                        <td width="17%">{{ yelp.reviews_count }}</td>
+                        <td width="17%">{{ yelp.services }}</td>
+                        <td width="17%">{{ yelp.address }}</td>
+                        <!--<td width="17%">{{ yelp.phone }}</td>-->
+                        <!--<td width="17%">{{ yelp.snippet }}</td>-->
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

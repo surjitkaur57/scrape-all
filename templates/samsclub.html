@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Sams Club</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="18.6%">SamsClub Id</th>
+                        <th width="18.8%">SamsClub Name</th>
+                        <th width="18.8%">SamsClub Rating</th>
+                        <th width="18.8%">SamsClub Price</th>
+                        <th width="18.8%">SamsClub Discount</th>
+                    </tr>
+                </thead>
+                    {% for samsclub in samsclub %}
+                <tbody>
+                    <tr>
+                        <td width="17%">{{ samsclub._id}}</td>
+                        <td width="17%">{{ samsclub.name}}</td>
+                        <td width="17%">{{ samsclub.rating}}</td>
+                        <td width="17%">{{ samsclub.price}}</td>
+                        <td width="17%">{{ samsclub.save_price}}</td>
+
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Google News</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="18.6%">Google News Id</th>
+                        <th width="18.8%">HeadLines</th>
+                        <th width="18.8%">SubHeadLines</th>
+
+                    </tr>
+                </thead>
+                    {% for googleNews in googleNews %}
+                <tbody>
+                    <tr>
+                        <td width="17%">{{ googleNews._id }}</td>
+                        <td width="17%">{{ googleNews.headlines }}</td>
+                        <td width="17%">{{ googleNews.subheadline }}</td>
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

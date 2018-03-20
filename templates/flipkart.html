@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+<p class="important">
+<center>
+    <h1>Flipkart</h1>
+</center>
+
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th width="14%">Product Id</th>
+                <th width="14%">Product Title</th>
+
+                <th width="18%">Product Specifications</th>
+                <th colspan="12">Product Price</th>
+            </tr>
+        </thead>
+            {% for flipkart in flipkart %}
+        <tbody>
+            <tr>
+                <td width="14%">{{ flipkart._id }}</td>
+                <td width="14%">{{ flipkart.title }}</td>
+
+                <td width="12%">{{ flipkart.specifications }}</td>
+                <td width="12%">{{ flipkart.price }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</p>
+
+
+{% endblock %}

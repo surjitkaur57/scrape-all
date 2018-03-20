@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Over Stock</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="18.6%">overstock Id</th>
+                        <th width="18.8%">overstock title</th>
+                        <th width="18.8%">overstock price</th>
+                        <th width="18.8%">overstock rating</th>
+                    </tr>
+                </thead>
+                    {% for overstock in overstock %}
+                <tbody>
+                    <tr>
+                        <td width="17%">{{ overstock._id }}</td>
+                        <td width="17%">{{ overstock.title }}</td>
+                        <td width="17%">{{ overstock.price }}</td>
+                        <td width="17%">{{ overstock.rating }}</td>
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}

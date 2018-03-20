@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}SignUp Page{% endblock %}
+{% block head %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<p class="important">
+<center><h1>Yellow Pages</h1></center>
+
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th width="14%">YellowPages Id</th>
+                        <th width="14%">YellowPages Title</th>
+                        <th width="18%">Yellowpages Rating</th>
+                        <th width="12%">YellowPages Address</th>
+                        <th colspan="12">YellowPages Phone</th>
+
+
+                    </tr>
+                </thead>
+                    {% for yellowpages in yellowpages %}
+                <tbody>
+                    <tr>
+                        <td width="14%">{{ yellowpages._id }}</td>
+                        <td width="14%">{{ yellowpages.title }}</td>
+                        <td width="18%">{{ yellowpages.rating_count }}</td>
+                        <td width="12%">{{ yellowpages.address }}</td>
+                        <td width="12%">{{ yellowpages.phone }}</td>
+
+
+                    </tr>
+                </tbody>
+
+                {% endfor %}
+            </table>
+
+
+</p>
+{% endblock %}
